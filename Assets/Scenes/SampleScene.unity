@@ -335,7 +335,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: 
   transport: {fileID: 1568122320}
-  networkAddress: localhost
+  networkAddress: 192.168.1.148
   maxConnections: 4
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
@@ -344,6 +344,7 @@ MonoBehaviour:
   autoCreatePlayer: 0
   playerSpawnMethod: 0
   spawnPrefabs: []
+  position: 3
 --- !u!114 &1568122319
 MonoBehaviour:
   m_ObjectHideFlags: 0

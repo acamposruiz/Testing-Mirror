@@ -8,6 +8,7 @@ using System;
 
 public class NetworkCustom : NetworkManager
 {
+    public int position;
     void Update()
     {
     }
@@ -24,5 +25,8 @@ public class NetworkCustom : NetworkManager
         Debug.Log($"OnClientConnect Called, connectionId: {conn.connectionId}");
  
         base.OnClientConnect(conn);
+
+        GameObject Cube = (GameObject)Instantiate(Resources.Load("Cube"));
+        Cube.transform.position = new Vector3(position, 0.0F, 0.0F);
     }
 }
