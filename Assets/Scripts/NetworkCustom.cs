@@ -28,6 +28,10 @@ public class NetworkCustom : NetworkManager
  
         base.OnServerConnect(conn);
 
+        Cube = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Cube"));
+        Cube.transform.position = new Vector3(-3.0F, 0.0F, 0.0F);
+        NetworkServer.Spawn(Cube);
+
         /* GameObject Cube = (GameObject)Instantiate(Resources.Load("Cube"));
         Cube.transform.position = new Vector3(position, 0.0F, 0.0F); */
     }
@@ -38,7 +42,7 @@ public class NetworkCustom : NetworkManager
 
         Cube = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Cube"));
          Cube.transform.position = new Vector3(position, 0.0F, 0.0F);
-        NetworkServer.Spawn(Cube);
+        //NetworkServer.Spawn(Cube);
  
         base.OnClientConnect(conn);
     }
